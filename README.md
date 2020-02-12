@@ -9,7 +9,7 @@ ________________________________________________________________________________
 
 Team:
 
-<br/>Василиненко Даніїл danyavasilinenko213@gmail.com  
+<br/>Василиненко Даніїл danyavasilinenko213@gmail.com
 <br/>Головко Андрій endry1407@gmail.com
 <br/>Каплинський Роман zayaz20022001@gmail.com
 <br/>Панфілов Дмитро diroc.zp@gmail.com
