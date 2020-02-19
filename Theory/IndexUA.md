@@ -5,4 +5,4 @@
 * [Як складати анкету?](https://github.com/ip-85/System-Dynamics/blob/master/Theory/Ua/How%20to%20make%20a%20Form.md)
 * [Як використовувати анкету, кому вона може бути корисною?](https://github.com/ip-85/System-Dynamics/blob/master/Theory/Ua/Why%20Forms%20are%20useful.md)
 * [Існуючі сервіси анкетування](https://github.com/ip-85/System-Dynamics/blob/master/Theory/Ua/QuestioningServises.md)
-* [Першоджерела](https://github.com/ip-85/System-Dynamics/blob/master/Theory/Ua/Source.md)
+* [Інформаційні джерела](https://github.com/ip-85/System-Dynamics/blob/master/Theory/Ua/Source.md)
