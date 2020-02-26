@@ -85,4 +85,10 @@
  * Складні ж питання починаються ближче
 до кінця, тому що опитуваний відноситься до відповідей на останні питання набагато уважніше.
 
+## Більш детальна інформація за цими посиланнями:
+### 1) [Типи запитань в анкеті по формі і по функціях](https://studopedia.su/1_11881_tipi-voprosov-v-ankete-po-forme-i-po-funktsiyam.html)
+### 2) [Типи запитань та правила їх оформлення в анкеті](https://studfile.net/preview/5274863/page:2/)
+### 3) [Запитання в анкеті.Види та приклади](https://blog.anketolog.ru/2014/09/voprosy-dlja-ankety-vidy-i-primery/) 
+### 4) [Методика складання анкет](https://works.doklad.ru/view/aOnMLlF-Khw.html)
+
 # [IndexUA](https://github.com/ip-85/System-Dynamics/blob/master/Theory/IndexUA.md)
