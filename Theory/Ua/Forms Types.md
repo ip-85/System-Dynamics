@@ -29,6 +29,6 @@
  * Вручення і збір анкет за місцем проживання, роботи і т.д.
  
  ## Більш детальну інформацію можна знайти за цим посиланням:
- ## [1) Види анкетування](https://ru.wikipedia.org/wiki/Метод_анкетирования)
+ ### 1) [Види анкетування](https://ru.wikipedia.org/wiki/Метод_анкетирования)
 
  # [IndexUA](https://github.com/ip-85/System-Dynamics/blob/master/Theory/IndexUA.md)
