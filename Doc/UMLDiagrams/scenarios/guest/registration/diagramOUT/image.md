@@ -1,0 +1,1 @@
+![Діаграма](https://github.com/ip-85/System-Dynamics/blob/master/Doc/UMLDiagrams/scenarios/guest/registration/diagramOUT/SYWkIImgAStDuUBAIKqhKSX8JKn9BUAoISlFAr58pi_9Bx8rC31GACwiIhKrjB2pIR8BI4pEJanFjRBHJx9JS2zDBIxXmg7S3AJS4r1gzUIqpGVHlK_nKxx5rqh12.png)
