@@ -1,1 +1,1 @@
-![Діаграма](https://github.com/ip-85/System-Dynamics/blob/master/Doc/UMLDiagrams/scenarios/guest/authorization/diagramOUT/UC2.png)
+![Діаграма](https://github.com/ip-85/System-Dynamics/blob/master/Doc/UMLDiagrams/scenarios/user/polls/diagramOUT/UC2.png)
