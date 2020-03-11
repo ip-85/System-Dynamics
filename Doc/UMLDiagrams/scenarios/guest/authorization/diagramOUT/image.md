@@ -1,0 +1,1 @@
+![Діаграма](https://github.com/ip-85/System-Dynamics/blob/master/Doc/UMLDiagrams/scenarios/guest/authorization/diagramOUT/UC3.png)
