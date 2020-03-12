@@ -20,3 +20,4 @@
 
 7. Система зберігає дані у базі і повідомляє користувача що зміни були успішно внесені.
 
+[Діаграма юзкейсу](https://github.com/ip-85/System-Dynamics/blob/master/Doc/UMLDiagrams/scenarios/user/Diagrams/UC1-AccChanging.md)
