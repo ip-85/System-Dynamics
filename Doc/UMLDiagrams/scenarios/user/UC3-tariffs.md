@@ -22,5 +22,4 @@
 
 8. Користувач отримує можливість користуватися перевагами вибраного тарифного плану.
 
-
-
+[Діаграма юзкейсу](https://github.com/ip-85/System-Dynamics/blob/master/Doc/UMLDiagrams/scenarios/user/Diagrams/UC3-tariffs.md)
