@@ -31,5 +31,3 @@
 13. Система відкриє сторінку "пройти опитування".
 
 14. Після аналізу роботи опитування адміністратор має змогу сповістити тех. підтримку та інтерв'юерів про зібрані результати роботи анкутування.
-
-[dich](http://www.plantuml.com/plantuml/proxy?src=https://github.com/ip-85/System-Dynamics/blob/master/Doc/UMLDiagrams/scenarios/admin/Diagrams/UC4%20-%20Roles%20Simulation.pu)
