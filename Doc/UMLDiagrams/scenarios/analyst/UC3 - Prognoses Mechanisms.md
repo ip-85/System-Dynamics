@@ -16,4 +16,6 @@
 
 6. Дане графічне зображення аналітик може завантажити (кножка "Завантажити").
 
-7. с.
+7. Система завантажує згенерований прогноз.
+
+[Діагарма юзкейсу](https://github.com/ip-85/System-Dynamics/blob/master/Doc/UMLDiagrams/scenarios/analyst/Diagrams/UC3%20-%20Prognoses%20Mechanisms.md)
