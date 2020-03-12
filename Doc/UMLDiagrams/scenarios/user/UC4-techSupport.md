@@ -22,3 +22,4 @@
 
 8. Користувач отримує відповідь на поставлене запитання.
 
+[Діаграма юзкейсу](https://github.com/ip-85/System-Dynamics/blob/master/Doc/UMLDiagrams/scenarios/user/Diagrams/UC4-techSupport.md)
