@@ -22,3 +22,7 @@
 7. Вносить відповідні записи до бази даних.
 
 8. Обліковий запис користувача створено, гість може використовувати його можливості.
+
+
+[Діаграма юзкейсу](https://github.com/ip-85/System-Dynamics/blob/master/Doc/UMLDiagrams/scenarios/guest/Diagrams/UC1%20-%20registration.md)
+
