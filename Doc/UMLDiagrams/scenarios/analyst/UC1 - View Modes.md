@@ -25,3 +25,5 @@
 6. Аналітик може зберегти дані (скопіювати тект, завантажити зображення діаграм).
 
 7. Система надає дані (або копіює текс в буфер обміну, або завантажує файл).
+
+[Діаграма юзкейсу](https://github.com/ip-85/System-Dynamics/blob/master/Doc/UMLDiagrams/scenarios/analyst/Diagrams/UC1%20-%20View%20Modes.md)
