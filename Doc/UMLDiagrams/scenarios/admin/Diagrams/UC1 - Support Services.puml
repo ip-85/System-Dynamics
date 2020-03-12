@@ -1,4 +1,4 @@
- @startuml SupportServices
+ @startuml 
 left header
 <font color=000 size=18><b>Package:</b> Admin
 
@@ -60,4 +60,8 @@ right footer
 Киів-2020
 end footer
 
+@enduml
+
+@startuml
+version
 @enduml
