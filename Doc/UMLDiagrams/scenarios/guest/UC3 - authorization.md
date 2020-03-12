@@ -17,3 +17,5 @@
 5. Якщо всі попередні умови виконані, система надає користувачу доступ до його акаунту.
 
 6. Користувач може вільно користуватись можливостями свого акаунту.
+
+[Діаграма юзкейсу](https://github.com/ip-85/System-Dynamics/blob/master/Doc/UMLDiagrams/scenarios/guest/Diagrams/UC3%20-%20authorization.md)
