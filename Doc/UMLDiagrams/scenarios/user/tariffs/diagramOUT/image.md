@@ -1,1 +1,0 @@
-![Діаграма](https://github.com/ip-85/System-Dynamics/blob/master/Doc/UMLDiagrams/scenarios/user/tariffs/diagramOUT/UC3.png)

@@ -1,1 +1,0 @@
-![Діаграма](https://github.com/ip-85/System-Dynamics/blob/master/Doc/UMLDiagrams/scenarios/user/technical%20support/diagramOUT/UC4.png)
