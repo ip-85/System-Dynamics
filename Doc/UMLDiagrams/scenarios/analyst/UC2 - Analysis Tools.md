@@ -20,3 +20,4 @@
 
 8. Можливість для формату JSON скопіювати дані в буфер обміну, натиснувши на кнопку "Скопіювати", або завантажити зразу готовий файл (кнопка "Завантажити").
 
+[Діанрама юзкейсу](https://github.com/ip-85/System-Dynamics/blob/master/Doc/UMLDiagrams/scenarios/analyst/Diagrams/UC2%20-%20Analysis%20Tools.md)
