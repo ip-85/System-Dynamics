@@ -26,4 +26,4 @@
 
 6. Система відпавляє запит і підтверджує операцію (зелений напис "Прийнято" поруч з кнопкою відправки).
 
-![UC1](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/ip-85/System-Dynamics/master/Doc/UMLDiagrams/scenarios/admin/Diagrams/UC1.pu)
+![UC1](http://www.plantuml.com/plantuml/proxy?idx=0&src=https://raw.githubusercontent.com/ip-85/System-Dynamics/master/Doc/UMLDiagrams/scenarios/admin/Diagrams/UC1.pu)
