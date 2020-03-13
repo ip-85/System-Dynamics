@@ -27,5 +27,3 @@
 9. В залежності від параметру сповіщення система сповіщує/не сповіщує інтерв'юерів.
 
 [Діаграма юзкейсу](https://github.com/ip-85/System-Dynamics/blob/master/Doc/UMLDiagrams/scenarios/admin/Diagrams/UC3%20-%20Forms%20Editing.md)
-
-[Діаграма юзкейсу](https://github.com/ip-85/System-Dynamics/blob/master/Doc/UMLDiagrams/scenarios/admin/Diagrams/UC4%20-%20Roles%20Simulation.md)
