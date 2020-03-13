@@ -24,4 +24,4 @@
 
 9. Показується успішне завершення операції відправки (або помилка).
 
-[Діаграма юзкейсу}(https://github.com/ip-85/System-Dynamics/blob/master/Doc/UMLDiagrams/scenarios/admin/Diagrams/UC2%20-%20Sending%20Forms.md)
+[Діаграма юзкейсу](https://github.com/ip-85/System-Dynamics/blob/master/Doc/UMLDiagrams/scenarios/admin/Diagrams/UC2%20-%20Sending%20Forms.md)
