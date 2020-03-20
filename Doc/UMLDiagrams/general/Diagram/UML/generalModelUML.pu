@@ -1,0 +1,88 @@
+@startuml ModelView
+right header
+  <font size=24 color=black>Package: <b>UCD_1.0
+end header
+  
+title
+<font size=18 color=black>Сервіс анкетувань
+<font size=16 color=black>Діаграма прецедентів
+end title
+
+actor "Гість" as Guest
+actor "Користувач" as User
+actor "Аналітик" as Analyst
+actor "Інтерв'юер" as Interviewer
+actor "Адміністратор" as Admin
+
+' UCes for Guest:
+usecase "<b>UC_1</b>\nРеєстрація" as UC1_Guest
+usecase "<b>UC_2</b>\nЗаповнення анонімних\nопитувань" as UC2_Guest
+usecase "<b>UC_3</b>\nАвторизація існуючого\nкористувача" as UC3_Guest
+
+' UCes for User:
+usecase "<b>UC_1</b>\nРедагування даних\nкористувача" as UC1_User
+usecase "<b>UC_2</b>\nПошук та заповнення\nопитування" as UC2_User
+usecase "<b>UC_3</b>\nЗміна тарифного\nплану" as UC3_User
+usecase "<b>UC_4</b>\nЗв'язок з тех.підтримкою" as UC4_User
+
+' UCes for Analyst:
+usecase "<b>UC_1</b>\nПерегляд результатів\nопитувань" as UC1_Analyst
+usecase "<b>UC_2</b>\nВикористання інструментів" as UC2_Analyst
+usecase "<b>UC_3</b>\nСтатистичні механізми для\nпрогнозування відповідей" as UC3_Analyst
+usecase "<b>UC_4</b>\nФормування звітності" as UC4_Analyst
+
+' UCes for Interviewer:
+usecase "<b>UC_1</b>\nСтворення нового\nопитування" as UC1_Interviewer
+usecase "<b>UC_2</b>\nРедагування опитувань" as UC2_Interviewer
+usecase "<b>UC_3</b>\nПерегляд інформації\nпро респондентів" as UC3_Interviewer
+usecase "<b>UC_4</b>\nФормування вибіркових\nпакетів даних" as UC4_Interviewer
+
+' UCes for Admin:
+usecase "<b>UC_1</b>\nОрганізація служб тех.підтримки\nз подальшим обслуговуванням\nданої системи замовником" as UC1_Admin
+usecase "<b>UC_2</b>\nАвтоматизована передача анкет\nвід респондентів до інтерв’юерів" as UC2_Admin
+usecase "<b>UC_3</b>\nРедагування анкети з подальшим\nвідсиланням результатів інтерв’юеру" as UC3_Admin
+usecase "<b>UC_4</b>\nМожливість "відігравати роль"\n(діяти, мати доступ до можливостей)\nяк інтерв’юера, так і респондента" as UC4_Admin
+usecase "<b>UC_5</b>\nМаніпуляції з правами\nдоступу користувачів" as UC5_Admin
+
+' Actors connections
+User -u-|> Guest
+Interviewer -u-|> Guest
+Analyst -u-|> Guest
+
+Admin -u-|> User
+Admin -u-|> Interviewer
+Admin -u-|> Analyst
+
+' UCes connectios
+Guest -l-> UC1_Guest
+Guest -r-> UC2_Guest
+Guest -r-> UC3_Guest
+
+User -r-> UC1_User
+User -r-> UC2_User
+User -r-> UC3_User
+User -r-> UC4_User
+
+Analyst -d-> UC1_Analyst
+Analyst -d-> UC2_Analyst
+Analyst -d-> UC3_Analyst
+Analyst -d-> UC4_Analyst
+
+Interviewer -l-> UC1_Interviewer
+Interviewer -l-> UC2_Interviewer
+Interviewer -l-> UC3_Interviewer
+Interviewer -l-> UC4_Interviewer
+
+Admin -d-> UC1_Admin
+Admin -d-> UC2_Admin
+Admin -d-> UC3_Admin
+Admin -d-> UC4_Admin
+Admin -d-> UC5_Admin
+
+right footer
+Сервіс анкетувань. Модель прецедентів.
+НТУУ КПІ ім.І.Сікорського
+Киів-2020
+end footer
+
+@enduml
