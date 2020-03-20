@@ -28,3 +28,4 @@
 
 11. Користувач бачить інформацію профілю вибраного ним респондента.
 
+[Діаграма юзкейсу](https://github.com/ip-85/System-Dynamics/blob/master/Doc/UMLDiagrams/scenarios/interviewer/Diagrams/UC3.md)

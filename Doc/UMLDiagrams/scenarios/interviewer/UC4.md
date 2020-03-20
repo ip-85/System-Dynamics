@@ -27,3 +27,5 @@
 10. Система формує звіт за заданими параметрами та надсилає його до аналітика.
 
 11. Звіт сформовано, аналітик отримав потрібні дані.
+
+[Діаграма юзкейсу](https://github.com/ip-85/System-Dynamics/blob/master/Doc/UMLDiagrams/scenarios/interviewer/Diagrams/UC4.md)
