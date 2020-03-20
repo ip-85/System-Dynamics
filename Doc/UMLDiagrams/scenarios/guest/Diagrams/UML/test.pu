@@ -1,0 +1,62 @@
+right header
+<font size=24 color=black>Package: <b>UCD_1.2
+
+end header
+
+title
+<font size=18 color=black>Аналітичний портал
+<font size=16 color=black>Діаграма прецедентів
+end title
+
+
+actor "Користувач" as User
+actor "Автор" as Author
+actor "Редактор" as Collaborator
+actor "Адміністратор" as Admin
+
+usecase "<b>UC_1</b>\nПереглянути список \nзвітів" as UC_1
+usecase "<b>UC_2</b>\nЗареєструватися" as UC_2
+usecase "<b>UC_3</b>\nУвійти в систему" as UC_3
+usecase "<b>UC_4</b>\nВикликати звіт" as UC_4
+usecase "<b>UC_5</b>\nСтворити звіт" as UC_5
+usecase "<b>UC_6</b>\nРедагувати звіт" as UC_6
+usecase "<b>UC_7</b>\nВидалити звіт" as UC_7
+usecase "<b>UC_8</b>\nРедагувати конфігурацію \nпорталу" as UC_8
+
+User --> UC_1
+User --> UC_3
+User --> UC_2
+User --> UC_4
+
+Author -u-> UC_1
+Author -u-> UC_3
+Author -u-> UC_2
+Author -u-> UC_4
+Author -u-> U_C5
+Author -u-> UC_6
+Author -u-> UC_7
+
+Collaborator --> UC_1
+Collaborator --> UC_3
+Collaborator -u-> UC_2
+Collaborator -u-> UC_4
+Collaborator -u-> UC_5
+Collaborator -u-> UC_6
+
+Admin -u-> UC_1
+Admin -u-> UC_3
+Admin -u-> UC_2
+Admin -u-> UC_4
+Admin -u-> UC_5
+Admin -u-> UC_6
+Admin -u-> UC_7
+Admin -u-> UC_8
+
+
+right footer
+
+
+Аналітичний портал. Модель прецедентів.
+НТУУ КПІ ім.І.Сікорського
+Киів-2020
+end footer
