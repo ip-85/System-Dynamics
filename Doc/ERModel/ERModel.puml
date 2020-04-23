@@ -1,1 +1,25 @@
-Put the code right here
+@startuml
+
+entity Question
+entity ResponseAlternative
+entity Extra {
+    key: 
+    value: 
+}
+entity Questionary
+entity QuestionType {
+    name: 
+    iconURL: 
+    beforeCreateCallback: 
+    afterCreateCallback: 
+    onVakidateResponse: 
+}
+
+Question "0,*"-->"1,1" QuestionType
+Question "1,1"<--"0,*" ResponseAlternative
+Question "0,1"<--"0,*" Extra
+Question "0,*"-->"1,1" Questionary
+Extra "0,*"-->"0,1" Questionary
+Extra "0,*"-->"0,1" ResponseAlternative
+
+@enduml
