@@ -1,8 +1,8 @@
 @startuml ModelView
 right header
-  <font size=24 color=black>Package: <b>UCD_1.0
+<font size=24 color=black>Package: <b>UCD_1.1
 end header
-  
+
 title
 <font size=18 color=black>Сервіс анкетувань
 <font size=16 color=black>Діаграма прецедентів
@@ -49,40 +49,39 @@ User -u-|> Guest
 Interviewer -u-|> Guest
 Analyst -u-|> Guest
 
-Admin -u-|> User
-Admin -u-|> Interviewer
-Admin -u-|> Analyst
+Admin -u--|> User
+Admin -u--|> Interviewer
+Admin -u--|> Analyst
 
 ' UCes connectios
-Guest -l-> UC1_Guest
-Guest -r-> UC2_Guest
-Guest -r-> UC3_Guest
+Guest -u-> UC1_Guest
+Guest -u-> UC2_Guest
+Guest -u-> UC3_Guest
 
-User -r-> UC1_User
-User -r-> UC2_User
-User -r-> UC3_User
-User -r-> UC4_User
+User -u-> UC1_User
+User -u-> UC2_User
+User -d--> UC3_User
+User -d--> UC4_User
 
-Analyst -d-> UC1_Analyst
+Analyst -r-> UC1_Analyst
 Analyst -d-> UC2_Analyst
 Analyst -d-> UC3_Analyst
-Analyst -d-> UC4_Analyst
+Analyst -l-> UC4_Analyst
 
-Interviewer -l-> UC1_Interviewer
-Interviewer -l-> UC2_Interviewer
-Interviewer -l-> UC3_Interviewer
-Interviewer -l-> UC4_Interviewer
+Interviewer -u-> UC1_Interviewer
+Interviewer -u-> UC2_Interviewer
+Interviewer -d--> UC3_Interviewer
+Interviewer -d--> UC4_Interviewer
 
-Admin -d-> UC1_Admin
+Admin -d--> UC1_Admin
 Admin -d-> UC2_Admin
 Admin -d-> UC3_Admin
 Admin -d-> UC4_Admin
-Admin -d-> UC5_Admin
+Admin -d--> UC5_Admin
 
 right footer
 Сервіс анкетувань. Модель прецедентів.
 НТУУ КПІ ім.І.Сікорського
 Киів-2020
 end footer
-
 @enduml
