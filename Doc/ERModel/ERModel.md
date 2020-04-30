@@ -2,7 +2,7 @@
 
 [UML код](https://github.com/ip-85/System-Dynamics/blob/master/Doc/ERModel/src/ERModel.puml)
 
-![ER model DDL](https://github.com/ip-85/System-Dynamics/blob/master/Doc/ERModel/src/ERModel.png)
+![ER model DDL](https://github.com/ip-85/System-Dynamics/blob/master/Doc/ERModel/src/System-Dynamics.png)
 
 [DDL код](https://github.com/ip-85/System-Dynamics/blob/master/src/sql/DDL.sql)
 
