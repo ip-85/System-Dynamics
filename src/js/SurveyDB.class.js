@@ -62,7 +62,6 @@ class SurveyDB {
     }
 
     console.log(questionary);
-    this.closeConnection();
     return JSON.stringify(questionary);
   }
 
