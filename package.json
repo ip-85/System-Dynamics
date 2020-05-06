@@ -1,0 +1,22 @@
+{
+  "name": "system-dynamics",
+  "version": "1.0.0",
+  "description": "survey system",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ip-85/System-Dynamics.git"
+  },
+  "author": "Daniil Vasilinenko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ip-85/System-Dynamics/issues"
+  },
+  "homepage": "https://github.com/ip-85/System-Dynamics#readme",
+  "dependencies": {
+    "mysql2": "^2.1.0"
+  }
+}
