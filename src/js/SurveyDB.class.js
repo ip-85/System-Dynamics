@@ -6,7 +6,7 @@ class SurveyDB {
     this.#conn = mysql.createConnection({
       host: 'localhost',
       user: 'root',
-      password: 'mario',
+      password: 'root',
       database: 'ERmodelImplementation'
     }).promise();
   }
