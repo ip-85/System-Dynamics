@@ -37,24 +37,6 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `ERmodelImplementation`.`question`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `ERmodelImplementation`.`question` ;
-
-CREATE TABLE IF NOT EXISTS `ERmodelImplementation`.`question` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `questionType` INT NULL,
-  PRIMARY KEY (`id`),
-  INDEX `questionType_idx` (`questionType` ASC) VISIBLE,
-  CONSTRAINT `questionType`
-    FOREIGN KEY (`questionType`)
-    REFERENCES `ERmodelImplementation`.`questionType` (`id`)
-    ON DELETE SET NULL
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
 -- Table `ERmodelImplementation`.`questionary`
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `ERmodelImplementation`.`questionary` ;
@@ -66,13 +48,45 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
+-- Table `ERmodelImplementation`.`question`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `ERmodelImplementation`.`question` ;
+
+CREATE TABLE IF NOT EXISTS `ERmodelImplementation`.`question` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `questionType` INT NULL,
+  `questionary` INT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `questionType_idx` (`questionType` ASC) VISIBLE,
+  INDEX `questionary_idx` (`questionary` ASC) VISIBLE,
+  CONSTRAINT `questionType`
+    FOREIGN KEY (`questionType`)
+    REFERENCES `ERmodelImplementation`.`questionType` (`id`)
+    ON DELETE SET NULL
+    ON UPDATE NO ACTION,
+  CONSTRAINT `questionaryId`
+    FOREIGN KEY (`questionary`)
+    REFERENCES `ERmodelImplementation`.`questionary` (`id`)
+    ON DELETE SET NULL
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
 -- Table `ERmodelImplementation`.`responsealternative`
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `ERmodelImplementation`.`responsealternative` ;
 
 CREATE TABLE IF NOT EXISTS `ERmodelImplementation`.`responsealternative` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  PRIMARY KEY (`id`))
+  `question` INT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `question_idx` (`question` ASC) VISIBLE,
+  CONSTRAINT `questionId`
+    FOREIGN KEY (`question`)
+    REFERENCES `ERmodelImplementation`.`question` (`id`)
+    ON DELETE SET NULL
+    ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
@@ -123,30 +137,41 @@ COMMIT;
 
 
 -- -----------------------------------------------------
--- Data for table `ERmodelImplementation`.`question`
--- -----------------------------------------------------
-START TRANSACTION;
-USE `ERmodelImplementation`;
-INSERT INTO `ERmodelImplementation`.`question` (`id`, `questionType`) VALUES (1, 1);
-INSERT INTO `ERmodelImplementation`.`question` (`id`, `questionType`) VALUES (2, 1);
-INSERT INTO `ERmodelImplementation`.`question` (`id`, `questionType`) VALUES (3, 1);
-INSERT INTO `ERmodelImplementation`.`question` (`id`, `questionType`) VALUES (4, 1);
-INSERT INTO `ERmodelImplementation`.`question` (`id`, `questionType`) VALUES (5, 1);
-INSERT INTO `ERmodelImplementation`.`question` (`id`, `questionType`) VALUES (6, 1);
-INSERT INTO `ERmodelImplementation`.`question` (`id`, `questionType`) VALUES (7, 1);
-INSERT INTO `ERmodelImplementation`.`question` (`id`, `questionType`) VALUES (8, 1);
-INSERT INTO `ERmodelImplementation`.`question` (`id`, `questionType`) VALUES (9, 1);
-INSERT INTO `ERmodelImplementation`.`question` (`id`, `questionType`) VALUES (10, 1);
-
-COMMIT;
-
-
--- -----------------------------------------------------
 -- Data for table `ERmodelImplementation`.`questionary`
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `ERmodelImplementation`;
 INSERT INTO `ERmodelImplementation`.`questionary` (`id`) VALUES (1);
+INSERT INTO `ERmodelImplementation`.`questionary` (`id`) VALUES (2);
+
+COMMIT;
+
+
+-- -----------------------------------------------------
+-- Data for table `ERmodelImplementation`.`question`
+-- -----------------------------------------------------
+START TRANSACTION;
+USE `ERmodelImplementation`;
+INSERT INTO `ERmodelImplementation`.`question` (`id`, `questionType`, `questionary`) VALUES (1, 1, 1);
+INSERT INTO `ERmodelImplementation`.`question` (`id`, `questionType`, `questionary`) VALUES (2, 1, 1);
+INSERT INTO `ERmodelImplementation`.`question` (`id`, `questionType`, `questionary`) VALUES (3, 1, 1);
+INSERT INTO `ERmodelImplementation`.`question` (`id`, `questionType`, `questionary`) VALUES (4, 1, 1);
+INSERT INTO `ERmodelImplementation`.`question` (`id`, `questionType`, `questionary`) VALUES (5, 1, 1);
+INSERT INTO `ERmodelImplementation`.`question` (`id`, `questionType`, `questionary`) VALUES (6, 1, 1);
+INSERT INTO `ERmodelImplementation`.`question` (`id`, `questionType`, `questionary`) VALUES (7, 1, 1);
+INSERT INTO `ERmodelImplementation`.`question` (`id`, `questionType`, `questionary`) VALUES (8, 1, 1);
+INSERT INTO `ERmodelImplementation`.`question` (`id`, `questionType`, `questionary`) VALUES (9, 1, 1);
+INSERT INTO `ERmodelImplementation`.`question` (`id`, `questionType`, `questionary`) VALUES (10, 1, 1);
+INSERT INTO `ERmodelImplementation`.`question` (`id`, `questionType`, `questionary`) VALUES (11, 1, 2);
+INSERT INTO `ERmodelImplementation`.`question` (`id`, `questionType`, `questionary`) VALUES (12, 1, 2);
+INSERT INTO `ERmodelImplementation`.`question` (`id`, `questionType`, `questionary`) VALUES (13, 1, 2);
+INSERT INTO `ERmodelImplementation`.`question` (`id`, `questionType`, `questionary`) VALUES (14, 1, 2);
+INSERT INTO `ERmodelImplementation`.`question` (`id`, `questionType`, `questionary`) VALUES (15, 1, 2);
+INSERT INTO `ERmodelImplementation`.`question` (`id`, `questionType`, `questionary`) VALUES (16, 1, 2);
+INSERT INTO `ERmodelImplementation`.`question` (`id`, `questionType`, `questionary`) VALUES (17, 1, 2);
+INSERT INTO `ERmodelImplementation`.`question` (`id`, `questionType`, `questionary`) VALUES (18, 1, 2);
+INSERT INTO `ERmodelImplementation`.`question` (`id`, `questionType`, `questionary`) VALUES (19, 1, 2);
+INSERT INTO `ERmodelImplementation`.`question` (`id`, `questionType`, `questionary`) VALUES (20, 1, 2);
 
 COMMIT;
 
@@ -156,16 +181,26 @@ COMMIT;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `ERmodelImplementation`;
-INSERT INTO `ERmodelImplementation`.`responsealternative` (`id`) VALUES (1);
-INSERT INTO `ERmodelImplementation`.`responsealternative` (`id`) VALUES (2);
-INSERT INTO `ERmodelImplementation`.`responsealternative` (`id`) VALUES (3);
-INSERT INTO `ERmodelImplementation`.`responsealternative` (`id`) VALUES (4);
-INSERT INTO `ERmodelImplementation`.`responsealternative` (`id`) VALUES (5);
-INSERT INTO `ERmodelImplementation`.`responsealternative` (`id`) VALUES (6);
-INSERT INTO `ERmodelImplementation`.`responsealternative` (`id`) VALUES (7);
-INSERT INTO `ERmodelImplementation`.`responsealternative` (`id`) VALUES (8);
-INSERT INTO `ERmodelImplementation`.`responsealternative` (`id`) VALUES (9);
-INSERT INTO `ERmodelImplementation`.`responsealternative` (`id`) VALUES (10);
+INSERT INTO `ERmodelImplementation`.`responsealternative` (`id`, `question`) VALUES (1, 1);
+INSERT INTO `ERmodelImplementation`.`responsealternative` (`id`, `question`) VALUES (2, 2);
+INSERT INTO `ERmodelImplementation`.`responsealternative` (`id`, `question`) VALUES (3, 3);
+INSERT INTO `ERmodelImplementation`.`responsealternative` (`id`, `question`) VALUES (4, 4);
+INSERT INTO `ERmodelImplementation`.`responsealternative` (`id`, `question`) VALUES (5, 5);
+INSERT INTO `ERmodelImplementation`.`responsealternative` (`id`, `question`) VALUES (6, 6);
+INSERT INTO `ERmodelImplementation`.`responsealternative` (`id`, `question`) VALUES (7, 7);
+INSERT INTO `ERmodelImplementation`.`responsealternative` (`id`, `question`) VALUES (8, 8);
+INSERT INTO `ERmodelImplementation`.`responsealternative` (`id`, `question`) VALUES (9, 9);
+INSERT INTO `ERmodelImplementation`.`responsealternative` (`id`, `question`) VALUES (10, 10);
+INSERT INTO `ERmodelImplementation`.`responsealternative` (`id`, `question`) VALUES (11, 11);
+INSERT INTO `ERmodelImplementation`.`responsealternative` (`id`, `question`) VALUES (12, 12);
+INSERT INTO `ERmodelImplementation`.`responsealternative` (`id`, `question`) VALUES (13, 13);
+INSERT INTO `ERmodelImplementation`.`responsealternative` (`id`, `question`) VALUES (14, 14);
+INSERT INTO `ERmodelImplementation`.`responsealternative` (`id`, `question`) VALUES (15, 15);
+INSERT INTO `ERmodelImplementation`.`responsealternative` (`id`, `question`) VALUES (16, 16);
+INSERT INTO `ERmodelImplementation`.`responsealternative` (`id`, `question`) VALUES (17, 17);
+INSERT INTO `ERmodelImplementation`.`responsealternative` (`id`, `question`) VALUES (18, 18);
+INSERT INTO `ERmodelImplementation`.`responsealternative` (`id`, `question`) VALUES (19, 19);
+INSERT INTO `ERmodelImplementation`.`responsealternative` (`id`, `question`) VALUES (20, 20);
 
 COMMIT;
 
@@ -232,6 +267,52 @@ INSERT INTO `ERmodelImplementation`.`extra` (`question`, `questionary`, `respose
 INSERT INTO `ERmodelImplementation`.`extra` (`question`, `questionary`, `resposealternative`, `key`, `value`) VALUES (NULL, NULL, 10, 'RA3', 'Не піду голосувати у жодному разі');
 INSERT INTO `ERmodelImplementation`.`extra` (`question`, `questionary`, `resposealternative`, `key`, `value`) VALUES (1, NULL, NULL, 'questionary', '1');
 INSERT INTO `ERmodelImplementation`.`extra` (`question`, `questionary`, `resposealternative`, `key`, `value`) VALUES (NULL, NULL, 1, 'RA2', 'Важко відповісти');
+INSERT INTO `ERmodelImplementation`.`extra` (`question`, `questionary`, `resposealternative`, `key`, `value`) VALUES (11, NULL, NULL, 'question', 'Чи задоволені ви життям у гуртожитку?');
+INSERT INTO `ERmodelImplementation`.`extra` (`question`, `questionary`, `resposealternative`, `key`, `value`) VALUES (11, NULL, NULL, 'questionary', '2');
+INSERT INTO `ERmodelImplementation`.`extra` (`question`, `questionary`, `resposealternative`, `key`, `value`) VALUES (12, NULL, NULL, 'question', 'Якщо наступного місяця ціна на прожиток у гуртожитку збільшиться...');
+INSERT INTO `ERmodelImplementation`.`extra` (`question`, `questionary`, `resposealternative`, `key`, `value`) VALUES (12, NULL, NULL, 'questionary', '2');
+INSERT INTO `ERmodelImplementation`.`extra` (`question`, `questionary`, `resposealternative`, `key`, `value`) VALUES (13, NULL, NULL, 'question', 'Ваш стілець був сломаний,що ви будете робити?');
+INSERT INTO `ERmodelImplementation`.`extra` (`question`, `questionary`, `resposealternative`, `key`, `value`) VALUES (13, NULL, NULL, 'questionary', '2');
+INSERT INTO `ERmodelImplementation`.`extra` (`question`, `questionary`, `resposealternative`, `key`, `value`) VALUES (14, NULL, NULL, 'question', 'Чи задоволені ви чистотою у гуртожитку?');
+INSERT INTO `ERmodelImplementation`.`extra` (`question`, `questionary`, `resposealternative`, `key`, `value`) VALUES (14, NULL, NULL, 'questionary', '2');
+INSERT INTO `ERmodelImplementation`.`extra` (`question`, `questionary`, `resposealternative`, `key`, `value`) VALUES (15, NULL, NULL, 'question', 'Послугами якого провайдера ви користуєтеся?');
+INSERT INTO `ERmodelImplementation`.`extra` (`question`, `questionary`, `resposealternative`, `key`, `value`) VALUES (15, NULL, NULL, 'questionary', '2');
+INSERT INTO `ERmodelImplementation`.`extra` (`question`, `questionary`, `resposealternative`, `key`, `value`) VALUES (16, NULL, NULL, 'question', 'Скільки раз на тиждень ви бачите студентів,що палять цигарки всередині гуртожитку?');
+INSERT INTO `ERmodelImplementation`.`extra` (`question`, `questionary`, `resposealternative`, `key`, `value`) VALUES (16, NULL, NULL, 'questionary', '2');
+INSERT INTO `ERmodelImplementation`.`extra` (`question`, `questionary`, `resposealternative`, `key`, `value`) VALUES (17, NULL, NULL, 'question', 'Якщо ваші друзі запитають вашу думку про гуртожиток,ви...');
+INSERT INTO `ERmodelImplementation`.`extra` (`question`, `questionary`, `resposealternative`, `key`, `value`) VALUES (17, NULL, NULL, 'questionary', '2');
+INSERT INTO `ERmodelImplementation`.`extra` (`question`, `questionary`, `resposealternative`, `key`, `value`) VALUES (18, NULL, NULL, 'question', 'Якщо каштелян попросить вас пофарбувати парка/прибрати на поверсі ви...');
+INSERT INTO `ERmodelImplementation`.`extra` (`question`, `questionary`, `resposealternative`, `key`, `value`) VALUES (18, NULL, NULL, 'questionary', '2');
+INSERT INTO `ERmodelImplementation`.`extra` (`question`, `questionary`, `resposealternative`, `key`, `value`) VALUES (19, NULL, NULL, 'question', 'Якщо студенська рада гуртожитку попросять невелику(до 100 грн) плату,для покращення гуртожитку(наприклад диван у коридорі)ви...');
+INSERT INTO `ERmodelImplementation`.`extra` (`question`, `questionary`, `resposealternative`, `key`, `value`) VALUES (19, NULL, NULL, 'questionary', '2');
+INSERT INTO `ERmodelImplementation`.`extra` (`question`, `questionary`, `resposealternative`, `key`, `value`) VALUES (20, NULL, NULL, 'question', 'Якщо б у вас з\'явилося бажання зробити ремонт у своїй кімнаті,співпрацювали б ви з каштеляном і завідуючою гуртожитку?');
+INSERT INTO `ERmodelImplementation`.`extra` (`question`, `questionary`, `resposealternative`, `key`, `value`) VALUES (20, NULL, NULL, 'questionary', '2');
+INSERT INTO `ERmodelImplementation`.`extra` (`question`, `questionary`, `resposealternative`, `key`, `value`) VALUES (NULL, NULL, 11, 'RA0', 'Так');
+INSERT INTO `ERmodelImplementation`.`extra` (`question`, `questionary`, `resposealternative`, `key`, `value`) VALUES (NULL, NULL, 11, 'RA1', 'Ні');
+INSERT INTO `ERmodelImplementation`.`extra` (`question`, `questionary`, `resposealternative`, `key`, `value`) VALUES (NULL, NULL, 11, 'RA2', 'Важко відповісти');
+INSERT INTO `ERmodelImplementation`.`extra` (`question`, `questionary`, `resposealternative`, `key`, `value`) VALUES (NULL, NULL, 12, 'RA0', 'Я пійду до завідуючої і запитаю субсідії');
+INSERT INTO `ERmodelImplementation`.`extra` (`question`, `questionary`, `resposealternative`, `key`, `value`) VALUES (NULL, NULL, 12, 'RA1', 'Я сплачу');
+INSERT INTO `ERmodelImplementation`.`extra` (`question`, `questionary`, `resposealternative`, `key`, `value`) VALUES (NULL, NULL, 12, 'RA2', 'Покину гуртожиток');
+INSERT INTO `ERmodelImplementation`.`extra` (`question`, `questionary`, `resposealternative`, `key`, `value`) VALUES (NULL, NULL, 13, 'RA0', 'Придбаю новий за свої кошти');
+INSERT INTO `ERmodelImplementation`.`extra` (`question`, `questionary`, `resposealternative`, `key`, `value`) VALUES (NULL, NULL, 13, 'RA1', 'Звернуся до каштеляну і попрошу новий стілець');
+INSERT INTO `ERmodelImplementation`.`extra` (`question`, `questionary`, `resposealternative`, `key`, `value`) VALUES (NULL, NULL, 13, 'RA2', 'Забронюю візит мастера,щоб він полагодив стілець');
+INSERT INTO `ERmodelImplementation`.`extra` (`question`, `questionary`, `resposealternative`, `key`, `value`) VALUES (NULL, NULL, 14, 'RA0', 'Так');
+INSERT INTO `ERmodelImplementation`.`extra` (`question`, `questionary`, `resposealternative`, `key`, `value`) VALUES (NULL, NULL, 14, 'RA1', 'Ні');
+INSERT INTO `ERmodelImplementation`.`extra` (`question`, `questionary`, `resposealternative`, `key`, `value`) VALUES (NULL, NULL, 15, 'RA0', 'КПІ-Телеком');
+INSERT INTO `ERmodelImplementation`.`extra` (`question`, `questionary`, `resposealternative`, `key`, `value`) VALUES (NULL, NULL, 15, 'RA1', 'іншим');
+INSERT INTO `ERmodelImplementation`.`extra` (`question`, `questionary`, `resposealternative`, `key`, `value`) VALUES (NULL, NULL, 16, 'RA0', 'Кожного дня');
+INSERT INTO `ERmodelImplementation`.`extra` (`question`, `questionary`, `resposealternative`, `key`, `value`) VALUES (NULL, NULL, 16, 'RA1', 'Декілька разів на тиждень');
+INSERT INTO `ERmodelImplementation`.`extra` (`question`, `questionary`, `resposealternative`, `key`, `value`) VALUES (NULL, NULL, 16, 'RA2', 'Ніколи');
+INSERT INTO `ERmodelImplementation`.`extra` (`question`, `questionary`, `resposealternative`, `key`, `value`) VALUES (NULL, NULL, 17, 'RA0', 'Пораджу гуртожиток');
+INSERT INTO `ERmodelImplementation`.`extra` (`question`, `questionary`, `resposealternative`, `key`, `value`) VALUES (NULL, NULL, 17, 'RA1', 'Пораджу утриматися від проживання');
+INSERT INTO `ERmodelImplementation`.`extra` (`question`, `questionary`, `resposealternative`, `key`, `value`) VALUES (NULL, NULL, 17, 'RA2', 'Важко відповісти');
+INSERT INTO `ERmodelImplementation`.`extra` (`question`, `questionary`, `resposealternative`, `key`, `value`) VALUES (NULL, NULL, 18, 'RA0', 'Відмовлюсь від роботи,тому що вони не мають на це законного права');
+INSERT INTO `ERmodelImplementation`.`extra` (`question`, `questionary`, `resposealternative`, `key`, `value`) VALUES (NULL, NULL, 18, 'RA1', 'Виконаєте прохання');
+INSERT INTO `ERmodelImplementation`.`extra` (`question`, `questionary`, `resposealternative`, `key`, `value`) VALUES (NULL, NULL, 19, 'RA0', 'Погодитесь');
+INSERT INTO `ERmodelImplementation`.`extra` (`question`, `questionary`, `resposealternative`, `key`, `value`) VALUES (NULL, NULL, 19, 'RA1', 'Відмовитесь від пропозиції');
+INSERT INTO `ERmodelImplementation`.`extra` (`question`, `questionary`, `resposealternative`, `key`, `value`) VALUES (NULL, NULL, 20, 'RA0', 'Так,залюбки');
+INSERT INTO `ERmodelImplementation`.`extra` (`question`, `questionary`, `resposealternative`, `key`, `value`) VALUES (NULL, NULL, 20, 'RA1', 'Ні,я їм не довіряю');
+INSERT INTO `ERmodelImplementation`.`extra` (`question`, `questionary`, `resposealternative`, `key`, `value`) VALUES (NULL, 2, NULL, 'name', 'Соц. опитування мешканців гуртожитку');
 
 COMMIT;
 
