@@ -1,6 +1,6 @@
 const mysql = require('mysql2/promise');
 
-let connection = mysql.createPool({host:'localhost', user: 'root', password: 'root', database: 'ERmodelImplementation'});
+let connection = mysql.createPool({host:'localhost', user: 'root', password: 'mario', database: 'ERmodelImplementation'});
 
 async function getQuestionaryID(pollName) {
     [rows, details] = await connection.execute('select extra.questionary from extra where extra.value = \'' + pollName + '\'');
