@@ -4,7 +4,7 @@ const bluebird = require('bluebird');
 const pool = mysql.createPool({
   host: 'localhost',
   user: 'root',
-  password: 'mario',
+  password: 'root',
   database: 'ERmodelImplementation'
 });
 
